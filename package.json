@@ -27,5 +27,8 @@
     "highland": "^2.13.4",
     "highland-process": "^1.0.5",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.12"
   }
 }
