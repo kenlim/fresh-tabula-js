@@ -4,7 +4,7 @@
   "description": "Extract CSV data from PDF tables using tabula-java.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Warning: no tests\" && exit 0"
   },
   "repository": {
     "type": "git",
