@@ -15,10 +15,11 @@ This is a maintained fork of the [`tabula-js`](https://github.com/ezodude/tabula
   - [Installing](#installing)
   - [Usage](#usage)
   - [Options](#options)
-  - [API](#api)
+- [API](#api)
     - [`extractCsv`](#extractcsv)
     - [`extractStreamCsv`](#extractstreamcsv)
     - [`streamCsv`](#streamcsv)
+- [Developing](#developing)
 - [Acknowledgements](#acknowledgements)
 
 ## Getting Started
@@ -72,7 +73,7 @@ Options are structured as a plain object.
 | password | String | empty | Password used to decrypt/access the document. |
 | useLineReturns | Boolean | `false` | Use embedded line returns in cells (only in spreadsheet mode). |
 
-### API
+## API
 
 #### `extractCsv`
 
@@ -147,6 +148,10 @@ stream
   .doto(console.log)
   .done(() => console.log('All done!'));
 ```
+
+## Developing
+
+TODO
 
 ## Acknowledgements
 
