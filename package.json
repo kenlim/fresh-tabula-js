@@ -1,10 +1,12 @@
 {
   "name": "fresh-tabula-js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Extract CSV data from PDF tables using tabula-java.",
   "main": "lib/bundle.js",
   "files": [
-    "lib", "bin", "CHANGELOG.md"
+    "lib",
+    "bin",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "rm -rf lib && rollup --config"
