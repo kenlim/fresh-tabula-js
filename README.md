@@ -3,7 +3,8 @@
 
 [![Build Status](https://travis-ci.org/cdtinney/fresh-tabula-js.svg?branch=master)](https://travis-ci.org/cdtinney/fresh-tabula-js) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-This is a maintained fork of the [`tabula-js`](https://github.com/ezodude/tabula-js) package, with changes such as:
+This is a maintained fork of the [`tabula-js`](https://github.com/ezodude/tabula-js) package,
+with changes such as:
 
 * Non-stream asynchronous extraction (use `async`/`await`)
 
@@ -31,8 +32,8 @@ This is a maintained fork of the [`tabula-js`](https://github.com/ezodude/tabula
 
 ## Getting Started
 
-**Only Node.js environments are supported due to file-system usage requirements. The package is exported
-as a CommonJS module.**
+**Only Node.js environments are supported due to file-system usage requirements.
+The package is exported as a CommonJS module.**
 
 ### Requirements
 
@@ -104,7 +105,7 @@ Options are structured as a plain object.
 
 #### `extractCsv`
 
-Use this method to process extracted data from the CSV using `async`/`await`.
+Use this method to process extracted data from PDF asynchronously using `async`/`await`.
 
 It returns an object in the following format:
 
@@ -127,11 +128,12 @@ const extractData = async () => {
 
 #### `extractStreamCsv`
 
-Use this method to process extracted data from the CSV using callbacks, via streams.
+Use this method to process extracted data from PDFs using callbacks, via streams.
 
 Callbacks will be executed for each parsed section of the PDF.
 
-Extracted data is a string representing an array of all rows (in CSV format) found, including headers.
+Extracted data is a string representing an array of all rows (in CSV format) found,
+including headers.
 
 ``` js
 const tabula = require('tabula-js');
@@ -151,7 +153,7 @@ table.extractStreamCsv((err, data) => console.log(data));
 
 #### `streamCsv`
 
-This is used to directly process data from the CSV via stream.
+This is used to process data from PDFs via streams.
 
 Example:
 
@@ -182,8 +184,9 @@ stream
 
 Development is done in the `develop` branch.
 
-When `master` changes (e.g. via pull request), [Travis CI](https://travis-ci.org/cdtinney/fresh-tabula-js) will build and deploy a new version of
-the package using semantic versioning based on commit messages to determine the version type.
+When `master` changes (e.g. via pull request), [Travis CI](https://travis-ci.org/cdtinney/fresh-tabula-js)
+will build and deploy a new version of the package using semantic versioning based on commit messages
+to determine the version type.
 
 ### Commit Messages
 
@@ -221,7 +224,8 @@ These rules can be viewed in `release.config.js`.
     ```
 
 7. Push the changes to `develop`.
-8. Merge to `master` via pull request. [Travis CI](https://travis-ci.org/cdtinney/fresh-tabula-js) will build and deploy to [NPM](https://npmjs.com/package/fresh-tabula-js).
+8. Merge to `master` via pull request. [Travis CI](https://travis-ci.org/cdtinney/fresh-tabula-js) will 
+    build and deploy to [NPM](https://npmjs.com/package/fresh-tabula-js).
 
 ### Additional Commands
 
