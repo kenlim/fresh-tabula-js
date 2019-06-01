@@ -7,6 +7,30 @@ describe('Command', () => {
     const command = new Command('foo', {});
     expect(command instanceof Command).toBeTruthy();
   });
+
+  it('prepends silent logging args when given command args with silent set to true', () => {
+    const cmd = new Command('foo', {
+      silent: true,
+    });
+    expect(cmd._args.slice(0, 3)).toEqual([
+      '-Dorg.slf4j.simpleLogger.defaultLogLevel=off',
+      '-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.NoOpLog',
+      '-Dfile.encoding=utf-8',
+    ]);
+  });
+
+  it('prepends the JAR path to internal args when constructed', () => {
+    const cmd = new Command('foo');
+    expect(cmd._args[0]).toEqual('-jar');
+    expect(cmd._args[1]).toContain('bin/jar/tabula-java.jar');
+  });
+
+  it('places the PDF path last in the array of arguments', () => {
+    const cmd = new Command('foo');
+    expect(cmd._args.slice(-1)).toEqual([
+      'foo',
+    ]);
+  });
 });
 
 describe('parseCommandArgs()', () => {
