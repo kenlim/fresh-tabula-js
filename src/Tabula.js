@@ -7,10 +7,6 @@ class Tabula {
     this._options = options;
   }
 
-  static fromPath(pdfPath, options) {
-    return new Tabula(pdfPath, options);
-  }
-
   streamCsv() {
     return highlandProc
       .from(new Command(this._pdfPath, this._options))
