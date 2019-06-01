@@ -60,3 +60,4 @@ class TabulaCommand {
 }
 
 module.exports = TabulaCommand;
+module.exports.parseCommandArgs = parseCommandArgs;
