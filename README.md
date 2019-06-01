@@ -235,6 +235,12 @@ To run tests in watch mode:
 $ npm run test:watch
 ```
 
+To run test coverage:
+
+```
+$ npm run test:cov
+```
+
 ## Acknowledgements
 
 * [Ezo Saleh](https://github.com/ezodude), [original author](https://github.com/ezodude/tabula-js) of this package
