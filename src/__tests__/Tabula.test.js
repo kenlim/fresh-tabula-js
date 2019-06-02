@@ -8,15 +8,19 @@ describe('Tabula', () => {
     });
   });
 
-  describe('streamCsv()', () => {
+  describe('_makeCommand()', () => {
     // TODO
   });
 
-  describe('extractStreamCsv()', () => {
+  describe('getCsvStream()', () => {
     // TODO
   });
 
-  describe('extractCsv()', () => {
+  describe('getCsvStreamData()', () => {
+    // TODO
+  });
+
+  describe('getCsv()', () => {
     // TODO
   });
 });

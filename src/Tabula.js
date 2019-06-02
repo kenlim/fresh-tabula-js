@@ -7,28 +7,30 @@ class Tabula {
     this._options = options;
   }
 
-  streamCsv() {
+  _makeCommand() {
+    return new Command(this._pdfPath, this._options);
+  }
+
+  getCsvStream() {
     return highlandProc
-      .from(new Command(this._pdfPath, this._options))
+      .from(this._makeCommand())
       .run();
   }
 
-  extractStreamCsv(callback) {
-    this.streamCsv()
+  getCsvStreamData(errCb, dataCb) {
+    this.getCsvStream()
         .map(data => data.toString())
         .split()
         .collect()
-        .stopOnError(err => callback(err, null))
-        .each(data => callback(null, data));
+        .stopOnError(errCb)
+        .each(dataCb);
   }
 
-  extractCsv() {
-    const cmd = new Command(this._pdfPath, this._options);
-    const result = cmd.runSync();
+  getCsv() {
     const {
       stdout,
       stderr,
-    } = result;
+    } = this._makeCommand().runSync();
 
     // TODO Check status/signal/error
     return {
