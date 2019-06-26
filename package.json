@@ -1,6 +1,6 @@
 {
   "name": "fresh-tabula-js",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Extract CSV data from PDF tables using tabula-java.",
   "main": "lib/bundle.js",
   "files": [

@@ -1,3 +1,15 @@
+## [1.2.12](https://github.com/cdtinney/fresh-tabula-js/compare/v1.2.11...v1.2.12) (2019-06-26)
+
+
+### Code Refactoring
+
+* rename Tabula methods ([2891fd6](https://github.com/cdtinney/fresh-tabula-js/commit/2891fd6))
+
+
+### BREAKING CHANGES
+
+* Tabula class method names updated for clarity
+
 ## [1.2.11](https://github.com/cdtinney/fresh-tabula-js/compare/v1.2.10...v1.2.11) (2019-06-14)
 
 
