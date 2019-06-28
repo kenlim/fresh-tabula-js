@@ -11,19 +11,19 @@ const JAR_PATH = path.join(__dirname, '../bin/jar/tabula-java.jar');
 const parseCommandArgs = (args = {}) => {
   return Object.entries(args).reduce((acc, curr) => {
     const [ key, value ] = curr;
-    const modifiedKey = `--${_.kebabCase(key)}`;
+    const cliKey = `--${_.kebabCase(key)}`;
 
     if (Array.isArray(value)) {
       return acc.concat(
         value.reduce((acc, curr) => {
-          return acc.concat(modifiedKey, curr);
+          return acc.concat(cliKey, curr);
         }, []),
       );
     } else if (typeof value === 'boolean' && value) {
-      return acc.concat(modifiedKey);
+      return acc.concat(cliKey);
     }
 
-    return acc.concat(modifiedKey, value);
+    return acc.concat(cliKey, value);
   }, []);
 };
 
