@@ -13,7 +13,8 @@
     "test": "jest src",
     "test:cov": "npm run test -- --coverage --coverageReporters=text-lcov --detectOpenHandles --forceExit",
     "test:cov-report": "npm run test:cov | coveralls",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
